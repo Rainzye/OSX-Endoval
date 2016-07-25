@@ -1,0 +1,21 @@
+; prototype
+; protocol
+
+protocol.hazardLi () {
+    hazardLi = [
+        "SDK-8BIOS//"
+    ]
+}
+
+prototype.hazardLi () {
+    hazardLi = [
+        "SDK-NReV//"
+    ]
+}
+
+$ callSys() []
+
+on (callSys.bootup()) {
+    find reso.resolute(hazardLi('type'));
+    type = hazardLi(found);
+}
