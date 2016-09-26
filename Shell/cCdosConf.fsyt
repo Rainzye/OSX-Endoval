@@ -11,9 +11,9 @@ cConsole [ "properties" ] () {
     endClear = LsIn send [ "" ] < cConsole [ "" ] LsOut
 }
 
-# cConsole [ "regkey" ] () {
-#     Ls.key = Ls.header(array).runner();
-#     key.toString = value('00' '11' '22' '33' '44' '55' '66' '77' '88' '99' 'AU').registerKey();
+cConsole [ "regkey" ] () {
+    Ls.key = Ls.header(array).runner();
+    key.toString = value('00' '11' '22' '33' '44' '55' '66' '77' '88' '99' 'AU').registerKey();
     
-#     return key();
-# }
+    return key();
+}
