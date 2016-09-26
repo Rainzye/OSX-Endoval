@@ -1,0 +1,21 @@
+$ Ls.fileExt = this.afterParam('.');
+
+fileExt [ "register" ] () {
+    # Tells the system "x.file" is "x.file" to be ran by "program"
+    if (!fileExt) {
+        Ls.unsupported = true;
+    }
+    
+    Ls.key = Ls.header(array).runner();
+    register = this.matches(value = ['00' '11' '22' '33' '44' '55' '66' '77' '88' '99' 'AU']) {
+        denyIf register.key = not(return key()).param();
+        key.match [ "register" ] = register.value(noCopy = true);
+        if (key.match(fileName) || key.match(fileName(other)) () {
+            Ls.warn = [ key.match(fileName) equalTo key.match(filename(other)) ];
+            Ls.support = key.match(fileName);
+            Ls.unsupported = key.match(fileName(other))(true);
+        }
+    }
+    
+    key.push = Ls.addToFile(this.key, "keyHandler.xnfr", "/registry");
+}
