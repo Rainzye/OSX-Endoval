@@ -1,0 +1,16 @@
+cCdosKey = require("cCdosFileExt.fsyt");
+
+cCdosKey.getKey(this.file("cCdos.fsyt"));
+cCdosKey.registerKey();
+
+# 8th sector is always 00 AU FF 00 9C FF E4 00 to be equal to the system default registrant
+cCdosSector({
+    [1] 00 00 00 00 00 00 00 00
+    [2] 00 00 FF 00 FF 00 00 FF
+    [3] 00 00 00 00 00 00 00 00
+    [4] 00 00 FF 00 FF 00 00 FF
+    [5] 00 00 00 00 00 00 00 00
+    [6] 00 00 FF 00 FF 00 00 FF
+    [7] 00 00 00 00 00 00 00 00
+    [8] 00 AU FF 00 9C FF E4 00
+});
