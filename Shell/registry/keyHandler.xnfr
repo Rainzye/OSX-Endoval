@@ -1,5 +1,5 @@
 cCdosConf.key = [ '0a' 'e1' '2r' 't3' 'v4' 'us' '16' '7p' 'L2' 'I2' 'AU' ]
 cCdosShell.key = [ '0a' 'e1' '5t' 'd4' 'G7' 'n9' '92' 'I3' 'ZU' 'R3' 'AU' ] {
     # Because exceeds normal key interger (seen by usage of 'ZU') 
-    ignoreBytes(>= 20).key(value);
+    ignoreBytes(>= 20).key(value) < nul;
 }
