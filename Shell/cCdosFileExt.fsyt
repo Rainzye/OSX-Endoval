@@ -1,21 +1,24 @@
 $ Ls.fileExt = this.afterParam('.');
 
 fileExt [ "register" ] () {
-    # Tells the system "x.file" is "x.file" to be ran by "program"
-    if (!fileExt) {
-        Ls.unsupported = true;
+    if (fileExt < nul) {
+        Ls.unsupported(file) = true;
     }
     
     Ls.key = Ls.header(array).runner();
-    register = this.matches(value = ['00' '11' '22' '33' '44' '55' '66' '77' '88' '99' 'AU']) {
-        denyIf register.key = not(return key()).param();
-        key.match [ "register" ] = register.value(noCopy = true);
-        if (key.match(fileName) || key.match(fileName(other)) () {
-            Ls.warn = [ key.match(fileName) equalTo key.match(filename(other)) ];
-            Ls.support = key.match(fileName);
-            Ls.unsupported = key.match(fileName(other))(true);
+    register = this.require(fileExt['.xnfr']);
+    registerKey = Ls.makeFile(fileName, fileExt['.xnfr']) && Ls.addToFile(fileName, fileExt['.xnfr'], key) {
+        denyIf register.key = not(key.registerKey().bytes('32')) < nul;
+        registerKey.match [ this.key ] = registerKey.value(noCopy = true).bytes('64');
+        if (key.match(param, key, other) {
+            other = exists.key = key.param(fileName);
+            if (other.matches(key)) {
+                Ls.warn = [ "Key " registerKey.key " is equal to " other.key ". Ignoring operation." ]
+                Ls.support = Ls.fileModified ? Date.string(fileName, other).choose(lower);
+                Ls.unsupported = fileName.other();
+            }
         }
     }
     
-    key.push = Ls.addToFile(this.key, "keyHandler.xnfr", "/registry");
+    registerKey.register(this.registerKey(fileName));
 }
