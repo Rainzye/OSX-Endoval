@@ -1,8 +1,33 @@
 $ Ls.fileExt = this.afterParam('.');
 
+fileExt [ "sector" ] () {
+    sector = this.bytes('8', '16');
+    seDefault = ["00 AU FF 00 9C FF E4 00"];
+    sector.sector(format({
+        [1] this.secureId() ? nul
+        [2] this.challstr(format, byte('1'));
+        [3] this.secureId() ? nul
+        [4] this.challstr(format, byte('3'));
+        [5] this.secureId() ? nul
+        [6] this.challstr(format, byte('5'));
+        [7] this.secureId() ? nul
+        [8] 00 AU FF 00 9C FF E4 00
+    });
+    
+    return sector;
+}
+
 fileExt [ "register" ] () {
     if (fileExt < nul) {
         Ls.unsupported(file) = true;
+    }
+    
+    if (sector < nul) {
+        # Not taking chances
+        Ls.unsupported(file) = forever(return true);
+    } else if (sector.sectorId(not this.seDefault())) {
+        # Another OS or a virus of some kind...
+        Ls.deleteFile(file).reason("Unknown sector ID or virus file.");
     }
     
     Ls.key = Ls.header(array).runner();
